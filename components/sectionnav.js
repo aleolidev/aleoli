@@ -6,9 +6,12 @@ const SectionNav = ({elements, currentIndex}) => {
     let navDots = new Array(elements).fill(false);
     navDots[currentIndex] = true;
 
+    const isFirst = navDots[0] === true;
+    const isLast = navDots[navDots.length - 1] === true;
+
     return (
         <section className={styles["container"]}>
-            <div className={styles["before-line"]} />
+            <div className={`${styles["before-line"]} ${isFirst ? styles["first-line"] : ""}`} />
             <div className={styles["nav"]}>
                 {
                     navDots.map((dot, i) => {
@@ -18,7 +21,7 @@ const SectionNav = ({elements, currentIndex}) => {
                     })
                 } 
             </div>
-            <div className={styles["after-line"]} />
+            <div className={`${styles["after-line"]} ${isLast ? styles["last-line"] : ""}`}  />
         </section>
     )
 }

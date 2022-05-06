@@ -5,13 +5,24 @@
     background: rgba(1, 5, 30, 0.4);
     position: absolute;
     width: 100%;
-    /* overflow-x: hidden; */
-    /* overflow-y: visible; */
+
+    /* Sticky */
+    position: fixed;
+    transform: translate(0, 0);
+    transition: all 0.25s ease-out;
 
     /* Glassmorpishm */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     z-index: 999;
+}
+
+.container.hide-container {
+    transform: translate(0, -20vh);
+}
+
+.container.visible-container {
+    transform: translateY(0);
 }
 
 .logo-container {

@@ -1,10 +1,12 @@
 import {useState} from 'react'
+import useScrollDirection from "../hooks/useScrollDirection";
 import styles from '../styles/Navbar.module.css'
 import { BsGithub, BsLinkedin } from "react-icons/bs"
 
 const Links = () => {
     return (<>
         <li className={styles["nav-item"]}>About</li>
+        <li className={styles["nav-item"]}>History</li>
         <li className={styles["nav-item"]}>Works</li>
         <li className={styles["nav-item"]}>Contact</li>
     </>)
@@ -20,9 +22,14 @@ const Icons = () => {
 const Navbar = () => {
     const [open, setOpen] = useState(false)
 
+    const isSticky = useScrollDirection() <= 0
+
     return (
         <>
-            <nav className={styles.container}>
+            <nav className={`
+                ${styles.container}
+                ${isSticky ? styles["visible-container"] : styles["hide-container"]}
+            `}>
                 <div className={styles["logo-container"]}>
                     {/* Logo */}
                 </div>
