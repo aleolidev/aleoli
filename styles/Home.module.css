@@ -1,6 +1,14 @@
 .container {
   padding: 0 2rem;
+  background-color: #01051e;
+  min-height: 100vh;
 }
+
+/* 
+
+TO REMOVE
+
+*/
 
 .main {
   min-height: 100vh;

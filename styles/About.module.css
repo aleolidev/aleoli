@@ -1,0 +1,15 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.color1 {
+    color: #32c492;
+}
+
+.gray-color {
+    color: #5b6d79;
+}
