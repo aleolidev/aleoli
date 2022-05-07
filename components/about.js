@@ -1,22 +1,10 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../styles/About.module.css'
-import { skills } from "../translations/translations"
-import useVisibility from "../hooks/useVisibility"
+import { motion } from 'framer-motion'
+import { Cursor } from 'react-simple-typewriter'
 
-const Skill = ({ skillName, skillTranslation, handleDescription, isOpen, isRight }) => {
-    const { ref, closed } = useVisibility(handleDescription, isOpen)
-
-    return (
-        <li className={ isOpen ? styles["open-dialog"] : styles["closed-dialog"]}><span className={ styles["one"] }/>
-            <button className={ styles["skill-button"] } onClick={ !closed ? handleDescription : null }>
-                { skillName }
-            </button>
-            <div ref={ ref } className={ `${styles["skill-note"]} ${ isOpen ? '' : styles["skill-note--closed"]}  ${ (isOpen && isRight) ? styles["skill-note--right"] : ''}`}>
-                { skills[skillTranslation]['en-US'] }
-            </div>
-        </li>
-    )
-}
+import Skill from './skill'
+import useTypewritter from '../hooks/useTypewriter'
 
 const About = () => {
     const skills = [
@@ -29,6 +17,11 @@ const About = () => {
     ]
 
     const [isOpen, setIsOpen] = useState(new Array(skills.length).fill(false))
+    
+    const toWrite = [    
+        { words: ['aleoli'], writeDelay: 70, eraseDelay: 150 },
+        { words: ['.div', '.dev'] , writeDelay: 70, eraseDelay: 350 },
+    ]
 
     const handleDescription = (i, setTo) => {
         const arr = new Array(isOpen.length).fill(false);
@@ -37,10 +30,23 @@ const About = () => {
         setIsOpen(arr)
     }
 
+    const { final: typewritter, finishedWriting } = useTypewritter(toWrite)
+
     return (
         <section className={styles["container"]}>
             <div className={styles["column-one"]}>
-                <h1 className={styles["page-name"]}>aleoli<span className={styles["main-color"]}>.dev</span></h1>
+                <h1 className={styles["page-name"]}>
+                    {
+                        typewritter.map((text, i) => {
+                            if (i === 0) {
+                                return (<span key={i}>{ text }</span>)
+                            } else {
+                                return (<span key={i} className={styles["main-color"]}>{ text }</span>)
+                            }
+                        })
+                    }
+                    { !finishedWriting && <Cursor cursorStyle='_'/> }
+                    </h1>
                 <h2 className={styles["my-name"]}>Alejandro Olivares</h2>
                 <p className={styles["short-description"]}>Sed commodo diam nonumy nonumy ut aliquam dolores feugiat. Vel molestie suscipit stet gubergren gubergren kasd invidunt vulputate nonumy sea duis et et eirmod amet.</p>
             </div>

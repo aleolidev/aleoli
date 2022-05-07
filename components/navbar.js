@@ -2,6 +2,7 @@ import {useState} from 'react'
 import useScrollDirection from "../hooks/useScrollDirection";
 import styles from '../styles/Navbar.module.css'
 import { BsGithub, BsLinkedin } from "react-icons/bs"
+import Logo from './logo';
 
 const Links = () => {
     return (<>
@@ -31,7 +32,7 @@ const Navbar = () => {
                 ${isSticky ? styles["visible-container"] : styles["hide-container"]}
             `}>
                 <div className={styles["logo-container"]}>
-                    {/* Logo */}
+                    <Logo />
                 </div>
                 <div className={styles["links-container"]}>
                     <button className={styles["button-wrapper"]} onClick={() => { setOpen(current => !current) }}>
