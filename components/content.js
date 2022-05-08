@@ -27,7 +27,7 @@ const Content = () => {
 
     return (
         <>
-            <SectionNav elements={ sections.length } currentIndex={ navIndex } />
+            <SectionNav elements={ sections } currentIndex={ navIndex } />
             <main className={styles['container']}>
                 <div ref={ about }><About/></div>
                 <div ref={ history }><History /></div>
