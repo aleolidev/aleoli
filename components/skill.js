@@ -8,7 +8,7 @@ const Skill = ({ skillName, skillTranslation, handleDescription, isOpen, isRight
     const { ref, closed } = useVisibility(handleDescription, isOpen)
 
     return (
-        <li className={ isOpen ? styles["open-dialog"] : styles["closed-dialog"]}><span className={ styles["one"] }/>
+        <li className={ isOpen ? styles["open-dialog"] : styles["closed-dialog"]}><span className={ styles["dot"] }/>
             <button className={ styles["skill-button"] } onClick={ !closed ? handleDescription : null }>
                 { skillName }
             </button>

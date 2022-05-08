@@ -60,7 +60,7 @@ const Skills = () => {
                     />)
                 })}
             </ul>
-            <button className={ styles["my-history"] }>My history</button>
+            <a href="#history"><button className={ styles["my-history"] }>My history</button></a>
         </motion.div>
     )
 }

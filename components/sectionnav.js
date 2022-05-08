@@ -13,15 +13,17 @@ const SectionNav = ({elements, currentIndex}) => {
     const variants = {
         hide: {
             maskImage: "-webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 0%))",
-            "-webkit-mask-image": "-webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 0%))",
+            WebkitMaskImage: "-webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 0%))",
             transition: { duration: 2 }
         },
         show: {
             maskImage: "-webkit-linear-gradient(bottom, rgba(0,0,0,1) 100%, rgba(255,255,255,0) 100%)",
-            "-webkit-mask-image": "-webkit-linear-gradient(bottom, rgba(0,0,0,1) 100%, rgba(255,255,255,0) 100%)",
+            WebkitMaskImage: "-webkit-linear-gradient(bottom, rgba(0,0,0,1) 100%, rgba(255,255,255,0) 100%)",
             transition: { delay: 2.7, duration: 1, ease: [.15,.75,1,.21] }
         }
     }
+
+    const hrefSections = ["#about", "#history", "#works", "#contact"];
 
     return (
         <motion.section 
@@ -35,7 +37,7 @@ const SectionNav = ({elements, currentIndex}) => {
                 {
                     navDots.map((dot, i) => {
                         return (
-                            <div key={i} className={`${styles["dot"]} ${dot ? styles["active"] : ''}`} />
+                            <a href={ hrefSections[i] } key={i} className={`${styles["dot"]} ${dot ? styles["active"] : ''}`} />
                         )
                     })
                 } 

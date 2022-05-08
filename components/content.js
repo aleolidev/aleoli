@@ -29,10 +29,10 @@ const Content = () => {
         <>
             <SectionNav elements={ sections } currentIndex={ navIndex } />
             <main className={styles['container']}>
-                <div ref={ about }><About/></div>
-                <div ref={ history }><History /></div>
-                <div ref={ works }><Works/></div>
-                <div ref={ contact }><Contact/></div>
+                <div id='about' ref={ about }><About/></div>
+                <div id='history' ref={ history }><History /></div>
+                <div id='works' ref={ works }><Works/></div>
+                <div id='contact' ref={ contact }><Contact/></div>
             </main>
         </>
     )
