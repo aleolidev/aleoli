@@ -35,7 +35,7 @@ const Loader = ({ setLoading }) => {
     useEffect (() => {
         const timer = setTimeout (() => {
             setLoading(false);
-        }, 500); // TODO: Change to 6000
+        }, 500); // TODO: Change to 4500
 
         return () => clearTimeout(timer);
     })
