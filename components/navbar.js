@@ -52,12 +52,14 @@ const Navbar = () => {
                             </div>
                         </ul>
                     </motion.div>
-                    <motion.div className={ styles["alpha-container"] } 
-                        initial={ "hide" }
-                        variants={ alphaVariants }
-                        animate={ open ? "visible" : "hide"}
-                        onClick={ () => setOpen(current => !current) }
-                    />
+                    { open && 
+                        <motion.div className={ styles["alpha-container"] } 
+                            initial={ "hide" }
+                            variants={ alphaVariants }
+                            animate={ open ? "visible" : "hide"}
+                            onClick={ () => setOpen(current => !current) }
+                        />
+                    }
                 </div>
             </nav>
         </>
