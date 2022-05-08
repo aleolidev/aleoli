@@ -47,7 +47,7 @@ const Loader = ({ setLoading }) => {
                 variants={ iconWrapper }
                 initial="center"
                 animate="logo"
-                transition={{ delay: 3.5 , duration: 2, ease: [.5,0,0,1]
+                transition={{ delay: 3 , duration: 1.5,  ease: [0.33, 1, 0.68, 1]
                 }}
             >
                 <motion.svg
