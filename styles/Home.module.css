@@ -2,7 +2,7 @@
   background-color: #01051e;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr;
+  grid-template-columns: 1fr repeat(12, 1fr) 1fr;
   gap: 0 1rem;
 }
 

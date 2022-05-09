@@ -17,8 +17,8 @@ const Icons = ({ isOpen, isDesktop, showDelay }) => {
 
     return (<li className={ styles.flex }>
         <motion.ul className={ styles.flex } initial={ "hidden" } variants={isDesktop ? variants.desktop : variants.mobile} animate={ isOpen ? "show" : "hidden" }>
-            <li className={styles["nav-icon"]}><BsGithub /></li>
-            <li className={styles["nav-icon"]}><BsLinkedin /></li>
+            <li className={styles["nav-icon"]}><a href='https://github.com/inmortalkaktus' target='_blank' rel='nofollow'><BsGithub /></a></li>
+            <li className={styles["nav-icon"]}><a href='https://www.linkedin.com/in/alejandro-olivares-mompo/' target='_blank' rel='nofollow'><BsLinkedin /></a></li>
         </motion.ul>
     </li>)
 }

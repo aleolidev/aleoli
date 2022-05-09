@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Content from '../components/content'
 import Navbar from '../components/navbar'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 import styles from '../styles/Home.module.css'
 import Loader from '../components/loader'
 
