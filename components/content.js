@@ -6,6 +6,7 @@ import Works from "./works"
 import Contact from "./contact"
 import SectionNav from '../components/sectionnav'
 import useCurrentSection from '../hooks/useCurrentSection'
+import ScrollIcon from './scrollicon'
 
 const Content = () => {
     let [navIndex, setNavIndex] = useState(0)
@@ -34,6 +35,7 @@ const Content = () => {
                 <div id='works' ref={ works }><Works/></div>
                 <div id='contact' ref={ contact }><Contact/></div>
             </main>
+            <ScrollIcon />
         </>
     )
 }
