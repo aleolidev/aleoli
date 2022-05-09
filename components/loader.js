@@ -35,7 +35,7 @@ const Loader = ({ setLoading }) => {
     useEffect (() => {
         const timer = setTimeout (() => {
             setLoading(false);
-        }, 4500); // TODO: Change to 4500
+        }, 5500); // TODO: Change to 4500
 
         return () => clearTimeout(timer);
     })
@@ -47,24 +47,24 @@ const Loader = ({ setLoading }) => {
                 variants={ iconWrapper }
                 initial="center"
                 animate="logo"
-                transition={{ delay: 3 , duration: 1.5,  ease: [0.33, 1, 0.68, 1]
+                transition={{ delay: 4 , duration: 1.5,  ease: [0.33, 1, 0.68, 1]
                 }}
             >
                 <motion.svg
                     width="100"
                     height="100"
-                    viewBox="0 0 444.9 445.5"
+                    viewBox="0 0 947.1 1049.3"
                     xmlns="http://www.w3.org/2000/svg"
                     className={ styles.logo }
                 >
                     <motion.path
-                        d="M 0 444.9 l 444.2 0.6 L 444.9 0 L 0 444.9 Z"
+                        d="M537.4,15,326,226.3,498.1,398.4V903.7L269,674.6h61.3V590.7H66.5L540,1064.3l473.5-473.6H749.7v83.9H811L581.9,903.7V393.1L748.7,226.3ZM444.6,226.3l92.8-92.7,92.7,92.7-92.7,92.8Z"
                         variants={ icon }
                         initial="hidden"
                         animate="visible"
                         transition={{
-                            default: { delay: .5 , duration: 2, ease: [.06,.17,.37,.98]},
-                            fill: { delay: 2.4 , duration: 0.25 , ease: "easeOut"}
+                            default: { delay: .5 , duration: 3.5, ease: "easeOut"},
+                            fill: { delay: 3.1 , duration: .9 , ease: "easeOut"}
                         }}
                     />
                 </motion.svg>

@@ -221,6 +221,12 @@
     border: 1px solid #32c492;
     color: #32c492;
     border-radius: .3rem;
+    transition: .2s cubic-bezier(0.61, 1, 0.88, 1);
+}
+
+.my-history:hover {
+    background-color: #32c492;
+    color: white;
 }
 
 .skill-button {
