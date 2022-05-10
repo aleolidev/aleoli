@@ -8,12 +8,12 @@ import useMediaQuery from '../hooks/useMediaQuery'
 const Skills = () => {
 
     const skills = [
-        {name: "JavaScript", translation: "long_text"},
-        {name: "Node.js", translation: "text"},
-        {name: "React", translation: "text"},
-        {name: "Gatsby", translation: "long_text"},
-        {name: "Next.js", translation: "long_text"},
-        {name: "Puppeteer", translation: "text"},
+        {name: "JavaScript", translation: "js"},
+        {name: "Node.js", translation: "nodejs"},
+        {name: "React", translation: "react"},
+        {name: "Gatsby", translation: "gatsby"},
+        {name: "Next.js", translation: "nextjs"},
+        {name: "Puppeteer", translation: "puppeteer"},
     ]
     
     const [isOpen, setIsOpen] = useState(new Array(skills.length).fill(false))
@@ -60,7 +60,7 @@ const Skills = () => {
                     />)
                 })}
             </ul>
-            <a href="#history"><button className={ styles["my-history"] }>My history</button></a>
+            <a href="#works"><button className={ styles["my-works"] }>My works</button></a>
         </motion.div>
     )
 }

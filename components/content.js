@@ -1,7 +1,6 @@
 import React, {useRef, useState} from 'react'
 import styles from "../styles/Content.module.css"
 import About from "./about"
-import History from "./history"
 import Works from "./works"
 import Contact from "./contact"
 import SectionNav from '../components/sectionnav'
@@ -12,11 +11,10 @@ const Content = () => {
     let [navIndex, setNavIndex] = useState(0)
 
     const about = useRef()
-    const history = useRef()
     const works = useRef()
     const contact = useRef()
 
-    const sections = [about, history, works, contact]
+    const sections = [about, works, contact]
 
     const currentSection = useCurrentSection(sections);
     
@@ -31,7 +29,6 @@ const Content = () => {
             <SectionNav elements={ sections } currentIndex={ navIndex } />
             <main className={styles['container']}>
                 <div id='about' ref={ about }><About/></div>
-                <div id='history' ref={ history }><History /></div>
                 <div id='works' ref={ works }><Works/></div>
                 <div id='contact' ref={ contact }><Contact/></div>
             </main>

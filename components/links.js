@@ -19,8 +19,6 @@ const Links = ({ isOpen, isDesktop, setIsOpen, showDelay }) => {
     return (<>
         <motion.li className={`${styles["nav-item"]} ${isDesktop && styles["desktop-item"]}`} initial={ "hidden" } variants={isDesktop ? variants(0).desktop : variants(0).mobile} 
             animate={ isOpen ? "show" : "hidden" }><a href='#about' onClick={ setIsOpen ? () => setIsOpen(current => !current) : null }>About</a></motion.li>
-        <motion.li className={`${styles["nav-item"]} ${isDesktop && styles["desktop-item"]}`} initial={ "hidden" } variants={isDesktop ? variants(1).desktop : variants(1).mobile} 
-            animate={ isOpen ? "show" : "hidden" }><a href='#history' onClick={ setIsOpen ? () => setIsOpen(current => !current) : null }>History</a></motion.li>
         <motion.li className={`${styles["nav-item"]} ${isDesktop && styles["desktop-item"]}`} initial={ "hidden" } variants={isDesktop ? variants(2).desktop : variants(2).mobile} 
             animate={ isOpen ? "show" : "hidden" }><a href='#works' onClick={ setIsOpen ? () => setIsOpen(current => !current) : null }>Works</a></motion.li>
         <motion.li className={`${styles["nav-item"]} ${isDesktop && styles["desktop-item"]}`} initial={ "hidden" } variants={isDesktop ? variants(3).desktop : variants(3).mobile} 

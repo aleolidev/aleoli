@@ -23,7 +23,7 @@ const SectionNav = ({elements, currentIndex}) => {
         }
     }
 
-    const hrefSections = ["#about", "#history", "#works", "#contact"];
+    const hrefSections = ["#about", "#works", "#contact"];
 
     return (
         <motion.section 

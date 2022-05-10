@@ -27,7 +27,8 @@ const AboutText = () => {
             transition={ isDesktop ? transitions.desktop : transitions.mobile }
         >
             <h2 className={styles["my-name"]}>Alejandro Olivares</h2>
-            <p className={styles["short-description"]}>Sed commodo diam nonumy nonumy ut aliquam dolores feugiat. Vel molestie suscipit stet gubergren gubergren kasd invidunt vulputate nonumy sea duis et et eirmod amet.</p>
+            <p className={styles["short-description"]}>I am Alejandro Olivares. My passion for software development was born when I was ten years old, and I wanted to modify my favorite video game to create my own story.</p>
+            <p className={styles["short-description"]}>Lately, I have been focused on improving my skills as a front-end developer, paying special attention to user experience, performance and search engine optimization, design, and above all, the intrinsic value of what I develop.</p>
         </motion.div>
     )
 }

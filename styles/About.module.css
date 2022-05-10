@@ -211,11 +211,11 @@
 
 .short-description {
     margin: 2rem 0 1.75rem 0;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #5b6d79;
 }
 
-.my-history {
+.my-works {
     margin-top: 1rem;
     padding: .5rem 2rem;
     border: 1px solid #32c492;
@@ -224,7 +224,7 @@
     transition: .2s cubic-bezier(0.61, 1, 0.88, 1);
 }
 
-.my-history:hover {
+.my-works:hover {
     background-color: #32c492;
     color: white;
 }
@@ -332,7 +332,7 @@
 
     .short-description {
         margin: 1.5rem 0 2.5rem 0;
-        font-size: 1.1rem;
+        font-size: .875rem;
     }
 }
 
