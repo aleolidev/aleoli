@@ -1,9 +1,10 @@
 .container {
-    min-height: 100vh;
     display: grid;
-        
-    grid-template-columns: 1fr 1fr;
     gap: 0 4.5rem;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
 }
 
 .column-one {
