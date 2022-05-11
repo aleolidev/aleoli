@@ -61,11 +61,12 @@
 }
 
 .send {
+    border: 1px solid #32c492;
+    border-radius: .3rem;
+    color: #32c492;
     margin-top: 1rem;
     padding: .5rem 2rem;
-    border: 1px solid #32c492;
-    color: #32c492;
-    border-radius: .3rem;
+    text-align: center;
     transition: .2s cubic-bezier(0.61, 1, 0.88, 1);
 }
 
@@ -75,6 +76,11 @@
 }
 
 @media (max-width: 1024px) {
+    .container {
+        min-height: 80vh;
+        /* margin: 4rem 0; */
+    }
+
     .form {
         width: 75%;
     }

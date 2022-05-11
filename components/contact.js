@@ -11,11 +11,6 @@ const Contact = () => {
     const [ref, inView] = useInView({ "threshold": 0.3 });
     const [show, setShow] = useState(false)
 
-    const variants = {
-        show: { opacity: 1, transition: { duration: .75 } },
-        hide: { opacity: 0 }
-    };
-
     const itemVariant = (item, yVariation) => {
         return {
             show: { opacity: 1, y: "0%", transition: { duration: .75, delay: item * 0.075 } },

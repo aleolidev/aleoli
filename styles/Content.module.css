@@ -5,6 +5,7 @@
 
 @media (max-width: 1024px) {
     .container {  
-      grid-area: 1 / 2 / span 5 / span 5;
+      grid-area: 1 / 2 / span 5 / span 6;
+      margin-right: 4rem;
     } 
 }
