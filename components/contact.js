@@ -26,8 +26,6 @@ const Contact = () => {
     useEffect(() => {
         if (inView && !show) {
             setShow(true)
-        } else if (!inView && show) {
-            setShow(false)
         }
     }, [inView]);
 

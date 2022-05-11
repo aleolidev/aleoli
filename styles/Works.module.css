@@ -5,3 +5,52 @@
     align-items: flex-start;
     justify-content: center;
 }
+
+.column-one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.column-two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.img-wrapper {
+    background-color:    #32c492;
+    display:             flex;
+    flex:                1 1 100%;
+    height:              100%;
+    overflow:            hidden;
+    position:            relative;
+  }
+  
+.img-wrapper img {
+    filter: grayscale(100%) contrast(1) blur(0);
+    flex: 1 0 100%;
+    height: 100%;
+    max-width: 100%;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+}
+
+.img-wrapper::before {
+    background-color: #0a3463;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    mix-blend-mode: lighten;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
