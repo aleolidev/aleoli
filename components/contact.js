@@ -65,7 +65,7 @@ const Contact = () => {
                     animate={ show ? "show" : "hide" }
                 />
 
-                <motion.a target="_blank" href={ getHref() } tabIndex="3" className={ styles.send }
+                <motion.a target="_blank" rel="noreferrer" href={ getHref() } tabIndex="3" className={ styles.send }
                     variants={ itemVariant(4, "40%") }
                     initial={ "hide" }
                     animate={ show ? "show" : "hide" }

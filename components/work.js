@@ -36,7 +36,7 @@ const Work = ({ name, description, technologies, img, imgWidth, imgHeight, githu
         
         { (isLeft || !isDesktop) &&
             <div className={`${styles["column-one"]} ${styles["img-wrapper"]} `}>
-                <a className={ styles["img-link"] } href={ link } target='_blank' rel='nofollow'>
+                <a className={ styles["img-link"] } href={ link } target='_blank' rel='nofollow noreferrer'>
                     <Image loading='lazy' src={ img } alt={ name } width={ imgWidth } height={ imgHeight } />
                 </a>
             </div> 
@@ -45,16 +45,16 @@ const Work = ({ name, description, technologies, img, imgWidth, imgHeight, githu
             <h2 className={ styles.title }>{ name }</h2>
             <p className={ styles.description }>{ description }</p>
             <span>
-                { technologies.map((tech) => <span className={ styles.technology }>{ tech } </span> ) }
+                { technologies.map((tech, i) => <span key={ i } className={ styles.technology }>{ tech } </span> ) }
             </span>
             <span className={ styles["icons-container"]}>
-                { github && <a href={ github } target='_blank' rel='nofollow'><BsGithub /></a> }
-                { link && <a href={ link } target='_blank' rel='nofollow'><AiOutlineLink /></a> }
+                { github && <a href={ github } target='_blank' rel='nofollow noreferrer'><BsGithub /></a> }
+                { link && <a href={ link } target='_blank' rel='nofollow noreferrer'><AiOutlineLink /></a> }
             </span>
         </div>
         { (!isLeft && isDesktop) && 
             <div className={`${styles["column-two"]} ${styles["img-wrapper"]}`}>
-                <a className={ styles["img-link"] } href={ link } target='_blank' rel='nofollow'>
+                <a className={ styles["img-link"] } href={ link } target='_blank' rel='nofollow noreferrer'>
                     <Image loading='lazy' src={ img } alt={ name } width={ imgWidth } height={ imgHeight } />
                 </a>
             </div> 
