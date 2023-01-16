@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import styles from '../../styles/Navbar.module.css'
+import styles from '../../../styles/Navbar.module.css'
 import { BsGithub, BsLinkedin } from "react-icons/bs"
 
 const Icons = ({ isOpen, isDesktop, showDelay }) => {

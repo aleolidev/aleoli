@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styles from '../../../styles/Contact.module.css'
+import styles from '../../../../styles/Contact.module.css'
 import { useAnimation, motion } from 'framer-motion'
 import { useInView } from "react-intersection-observer";
 import { TiHeartFullOutline } from "react-icons/ti"

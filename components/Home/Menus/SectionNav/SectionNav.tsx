@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../../styles/SectionNav.module.css'
+import styles from '../../../../styles/SectionNav.module.css'
 import { motion } from 'framer-motion';
 
 const SectionNav = ({elements, currentIndex}) => {

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import styles from '../../../styles/Works.module.css'
+import styles from '../../../../styles/Works.module.css'
 import Image from 'next/image'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { BsGithub } from "react-icons/bs"
 import { AiOutlineLink } from "react-icons/ai"
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../../hooks/useMediaQuery';
 
 const Work = ({ name, description, technologies, img, imgWidth, imgHeight, github, link, isLeft }) => {
     const isDesktop = !useMediaQuery('(max-width: 1024px)')

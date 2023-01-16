@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { motion } from 'framer-motion';
-import useScrollDirection from "../../../hooks/useScrollDirection";
-import styles from '../../../styles/Navbar.module.css'
+import useScrollDirection from "../../../../hooks/useScrollDirection";
+import styles from '../../../../styles/Navbar.module.css'
 import Logo from '../../Logo/Logo';
 import Burger from '../../Buttons/Burger';
 import Links from './Links';

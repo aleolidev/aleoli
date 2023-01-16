@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import styles from '../../styles/Loader.module.css'
+import styles from '../../../styles/Loader.module.css'
 import { motion } from 'framer-motion'
 
 const iconWrapper = {

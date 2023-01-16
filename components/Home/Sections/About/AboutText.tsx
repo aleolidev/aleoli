@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import styles from '../../../styles/About.module.css'
-import useMediaQuery from '../../../hooks/useMediaQuery'
+import styles from '../../../../styles/About.module.css'
+import useMediaQuery from '../../../../hooks/useMediaQuery'
 
 const AboutText = () => {
     
