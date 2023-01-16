@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-import Skill from './skill'
-import styles from '../styles/About.module.css'
-import useMediaQuery from '../hooks/useMediaQuery'
+import Skill from './Skill'
+import styles from '../../styles/About.module.css'
+import useMediaQuery from '../../hooks/useMediaQuery'
 
 const Skills = () => {
 

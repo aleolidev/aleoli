@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from '../styles/Works.module.css'
-import Work from './work'
+import styles from '../../../styles/Works.module.css'
+import Work from './Work'
 
 const Works = () => {
     return (
@@ -31,6 +31,7 @@ const Works = () => {
                 technologies={['MongoDB', 'React', 'Node.js', 'Puppeteer']} 
                 img='/static/images/safesnipe.png' imgWidth={1332} imgHeight={882}
                 github='https://github.com/inmortalkaktus/SafeSnipe' 
+                link={undefined}
                 isLeft={ true } 
             />
         </section>

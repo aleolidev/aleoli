@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import styles from '../styles/Navbar.module.css'
+import styles from '../../../styles/Navbar.module.css'
 
 const Links = ({ isOpen, isDesktop, setIsOpen, showDelay }) => {
     const variants = (n) => {

@@ -1,11 +1,11 @@
 import React, {useRef, useState} from 'react'
-import styles from "../styles/Content.module.css"
-import About from "./About"
-import Works from "./Works"
-import Contact from "./Contact"
-import SectionNav from './SectionNav'
-import useCurrentSection from '../hooks/useCurrentSection'
-import ScrollIcon from './ScrollIcon'
+import styles from "../../styles/Content.module.css"
+import About from "../Sections/About/About"
+import Works from "../Sections/Works/Works"
+import Contact from "../Sections/Contact/Contact"
+import SectionNav from '../Menus/SectionNav/SectionNav'
+import useCurrentSection from '../../hooks/useCurrentSection'
+import ScrollIcon from '../Icons/ScrollIcon'
 
 const Content = () => {
     let [navIndex, setNavIndex] = useState(0)

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import styles from '../styles/About.module.css'
+import styles from '../../../styles/About.module.css'
 import { Cursor } from 'react-simple-typewriter'
 
-import useTypewritter from '../hooks/useTypewriter'
+import useTypewritter from '../../../hooks/useTypewriter'
 import AboutText from './AboutText'
-import Skills from './Skills'
+import Skills from '../../Skills/Skills'
 
 const About = () => {
     const [finishedLogo, setFinishedLogo] = useState(false);

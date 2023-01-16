@@ -1,11 +1,11 @@
 import {useState} from 'react'
 import { motion } from 'framer-motion';
-import useScrollDirection from "../hooks/useScrollDirection";
-import styles from '../styles/Navbar.module.css'
-import Logo from './logo';
-import Burger from './burger';
-import Links from './links';
-import Icons from './icons';
+import useScrollDirection from "../../../hooks/useScrollDirection";
+import styles from '../../../styles/Navbar.module.css'
+import Logo from '../../Logo/Logo';
+import Burger from '../../Buttons/Burger';
+import Links from './Links';
+import Icons from '../../Icons/Icons';
 
 const showDelay = 0.05
 
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <div className={styles["links-container"]}>
                     <Burger isOpen={ open } onClick={() => { setOpen(current => !current)}} />
                     <ul className={styles["nav-desktop-items"]}>
-                        <Links isOpen={ true } isDesktop={ true } showDelay={ showDelay }/>
+                        <Links isOpen={ true } isDesktop={ true } setIsOpen={ setOpen } showDelay={ showDelay }/>
                         <Icons isOpen={ true } isDesktop={ true } showDelay={ showDelay }/>
                     </ul>
                     <motion.div

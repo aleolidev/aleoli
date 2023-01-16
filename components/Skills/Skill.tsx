@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from '../styles/About.module.css'
-import * as skills from "../translations/translations.json"
+import styles from '../../styles/About.module.css'
+import * as skills from "../../translations/translations.json"
 import { motion } from 'framer-motion'
-import useVisibility from "../hooks/useVisibility"
+import useVisibility from "../../hooks/useVisibility"
 
 const Skill = ({ skillName, skillTranslation, handleDescription, isOpen, isRight }) => {
     const { ref, closed } = useVisibility(handleDescription, isOpen)

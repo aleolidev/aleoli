@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styles from '../styles/Contact.module.css'
+import styles from '../../../styles/Contact.module.css'
 import { useAnimation, motion } from 'framer-motion'
 import { useInView } from "react-intersection-observer";
 import { TiHeartFullOutline } from "react-icons/ti"
@@ -46,7 +46,7 @@ const Contact = () => {
                     name="subject"
                     placeholder='Subject'
                     className={styles.subject}
-                    tabIndex="1"
+                    tabIndex={1}
                     variants={ itemVariant(2, "40%") }
                     initial={ "hide" }
                     animate={ show ? "show" : "hide" }
@@ -59,13 +59,13 @@ const Contact = () => {
                     className={ styles.message }
                     name="message"
                     rows={7}
-                    tabIndex="2"
+                    tabIndex={2}
                     variants={ itemVariant(3, "15%") }
                     initial={ "hide" }
                     animate={ show ? "show" : "hide" }
                 />
 
-                <motion.a target="_blank" rel="noreferrer" href={ getHref() } tabIndex="3" className={ styles.send }
+                <motion.a target="_blank" rel="noreferrer" href={ getHref() } tabIndex={3} className={ styles.send }
                     variants={ itemVariant(4, "40%") }
                     initial={ "hide" }
                     animate={ show ? "show" : "hide" }
